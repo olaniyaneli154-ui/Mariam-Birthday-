@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, Mariam</title>
+
+<style>
+
+/* =====================================================
+   BASIC RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf7;
+    color: #241c24;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(244, 183, 204, .45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 25%,
+            rgba(205, 184, 239, .45),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf7,
+            #f8edf5
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 5;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: .6;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 11vw, 125px);
+    line-height: .9;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero h1 .accent {
+    font-style: italic;
+}
+
+.intro {
+    max-width: 620px;
+    margin: auto;
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    opacity: .72;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    background: #241c24;
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+
+/* =====================================================
+   FLOATING DECORATIONS
+===================================================== */
+
+.decor {
+    position: absolute;
+    font-size: 25px;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+    opacity: .7;
+}
+
+.decor.one {
+    top: 15%;
+    left: 8%;
+}
+
+.decor.two {
+    top: 25%;
+    right: 9%;
+
+    animation-delay: 1s;
+}
+
+.decor.three {
+    bottom: 18%;
+    left: 13%;
+
+    animation-delay: 1.5s;
+}
+
+.decor.four {
+    bottom: 15%;
+    right: 13%;
+
+    animation-delay: 2s;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+
+/* =====================================================
+   FRIEND ANIMATION
+===================================================== */
+
+.friend-animation {
+    width: 330px;
+    height: 300px;
+
+    margin: 20px auto 35px;
+
+    position: relative;
+}
+
+
+/* Ground shadow */
+
+.friend-animation::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 8px;
+    left: 50%;
+
+    width: 220px;
+    height: 25px;
+
+    transform: translateX(-50%);
+
+    background: rgba(36,28,36,.1);
+
+    border-radius: 50%;
+
+    animation: shadowPulse 2.5s infinite;
+}
+
+@keyframes shadowPulse {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: .4;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(.88);
+        opacity: .2;
+    }
+}
+
+
+/* -----------------------------
+   FRIEND 1
+----------------------------- */
+
+.friend-one {
+    position: absolute;
+
+    left: 42px;
+    bottom: 25px;
+
+    width: 105px;
+    height: 220px;
+
+    animation:
+        friendBounce 2.5s ease-in-out infinite;
+}
+
+
+/* Head */
+
+.friend-one .head {
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    left: 16px;
+    top: 0;
+
+    border-radius: 50%;
+
+    background: #9a5b43;
+
+    z-index: 3;
+}
+
+
+/* Hair */
+
+.friend-one .hair {
+    position: absolute;
+
+    width: 80px;
+    height: 65px;
+
+    left: 11px;
+    top: -7px;
+
+    border-radius: 50% 50% 40% 40%;
+
+    background: #24191b;
+
+    z-index: 4;
+}
+
+
+/* Face */
+
+.friend-one .eye-left,
+.friend-one .eye-right {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #241c24;
+
+    border-radius: 50%;
+
+    top: 31px;
+
+    z-index: 5;
+}
+
+.friend-one .eye-left {
+    left: 37px;
+}
+
+.friend-one .eye-right {
+    left: 58px;
+}
+
+.friend-one .smile {
+    position: absolute;
+
+    width: 22px;
+    height: 10px;
+
+    border-bottom: 3px solid #241c24;
+
+    border-radius: 50%;
+
+    top: 45px;
+    left: 41px;
+
+    z-index: 5;
+}
+
+
+/* Body */
+
+.friend-one .body {
+    position: absolute;
+
+    width: 105px;
+    height: 110px;
+
+    left: 0;
+    top: 68px;
+
+    border-radius: 35px 35px 20px 20px;
+
+    background: #dca9bc;
+}
+
+
+/* Arm */
+
+.friend-one .arm {
+    position: absolute;
+
+    width: 18px;
+    height: 75px;
+
+    background: #9a5b43;
+
+    border-radius: 20px;
+
+    top: 78px;
+    right: -7px;
+
+    transform: rotate(-35deg);
+
+    transform-origin: top;
+
+    animation: wave 2.5s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(-35deg);
+    }
+
+    50% {
+        transform: rotate(-55deg);
+    }
+}
+
+
+/* Legs */
+
+.friend-one .leg-one,
+.friend-one .leg-two {
+    position: absolute;
+
+    width: 20px;
+    height: 65px;
+
+    background: #302934;
+
+    top: 170px;
+
+    border-radius: 10px;
+}
+
+.friend-one .leg-one {
+    left: 28px;
+}
+
+.friend-one .leg-two {
+    left: 62px;
+}
+
+
+/* -----------------------------
+   FRIEND 2
+----------------------------- */
+
+.friend-two {
+    position: absolute;
+
+    right: 38px;
+    bottom: 25px;
+
+    width: 105px;
+    height: 220px;
+
+    animation:
+        friendBounce 2.5s ease-in-out infinite;
+
+    animation-delay: .35s;
+}
+
+.friend-two .head {
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    left: 16px;
+    top: 0;
+
+    border-radius: 50%;
+
+    background: #8b513b;
+
+    z-index: 3;
+}
+
+
+/* Hair */
+
+.friend-two .hair {
+    position: absolute;
+
+    width: 80px;
+    height: 65px;
+
+    left: 11px;
+    top: -7px;
+
+    border-radius: 50% 50% 40% 40%;
+
+    background: #171316;
+
+    z-index: 4;
+}
+
+
+/* Face */
+
+.friend-two .eye-left,
+.friend-two .eye-right {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #241c24;
+
+    border-radius: 50%;
+
+    top: 31px;
+
+    z-index: 5;
+}
+
+.friend-two .eye-left {
+    left: 37px;
+}
+
+.friend-two .eye-right {
+    left: 58px;
+}
+
+.friend-two .smile {
+    position: absolute;
+
+    width: 22px;
+    height: 10px;
+
+    border-bottom: 3px solid #241c24;
+
+    border-radius: 50%;
+
+    top: 45px;
+    left: 41px;
+
+    z-index: 5;
+}
+
+
+/* Body */
+
+.friend-two .body {
+    position: absolute;
+
+    width: 105px;
+    height: 110px;
+
+    left: 0;
+    top: 68px;
+
+    border-radius: 35px 35px 20px 20px;
+
+    background: #c9b1e7;
+}
+
+
+/* Arm */
+
+.friend-two .arm {
+    position: absolute;
+
+    width: 18px;
+    height: 75px;
+
+    background: #8b513b;
+
+    border-radius: 20px;
+
+    top: 78px;
+    left: -7px;
+
+    transform: rotate(35deg);
+
+    transform-origin: top;
+
+    animation: waveTwo 2.5s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+@keyframes waveTwo {
+
+    0%,
+    100% {
+        transform: rotate(35deg);
+    }
+
+    50% {
+        transform: rotate(55deg);
+    }
+}
+
+
+/* Legs */
+
+.friend-two .leg-one,
+.friend-two .leg-two {
+    position: absolute;
+
+    width: 20px;
+    height: 65px;
+
+    background: #302934;
+
+    top: 170px;
+
+    border-radius: 10px;
+}
+
+.friend-two .leg-one {
+    left: 28px;
+}
+
+.friend-two .leg-two {
+    left: 62px;
+}
+
+
+@keyframes friendBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+    padding: 90px 20px;
+}
+
+.section-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: clamp(38px, 6vw, 60px);
+}
+
+.section-title p {
+    margin-top: 12px;
+    opacity: .6;
+}
+
+
+/* =====================================================
+   FRIENDSHIP SECTION
+===================================================== */
+
+.friendship {
+    background: white;
+}
+
+.friendship-card {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 55px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fb,
+            #f5effa
+        );
+
+    box-shadow:
+        0 20px 60px rgba(45,30,50,.08);
+}
+
+.friendship-card p {
+    font-size: 18px;
+    line-height: 1.9;
+
+    opacity: .75;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message-wrap {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 55px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(45,30,50,.08);
+}
+
+.message-wrap p {
+
+    font-size: 17px;
+
+    line-height: 1.95;
+
+    margin-bottom: 18px;
+}
+
+.signature {
+
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   WISHES
+===================================================== */
+
+.wishes {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.wish {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(45,30,50,.07);
+
+    transition: .3s;
+}
+
+.wish:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+.wish .number {
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    opacity: .3;
+}
+
+.wish h3 {
+
+    margin: 15px 0 10px;
+
+    font-size: 22px;
+}
+
+.wish p {
+
+    line-height: 1.7;
+
+    opacity: .7;
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake-section {
+
+    text-align: center;
+
+    background: #241c24;
+
+    color: white;
+}
+
+.cake {
+
+    width: 240px;
+    height: 200px;
+
+    position: relative;
+
+    margin: 30px auto;
+}
+
+.plate {
+
+    position: absolute;
+
+    width: 240px;
+    height: 20px;
+
+    bottom: 15px;
+
+    background: #d8c4e9;
+
+    border-radius: 50%;
+}
+
+.cake-body {
+
+    position: absolute;
+
+    width: 190px;
+    height: 80px;
+
+    left: 25px;
+    top: 90px;
+
+    background: #e7bfd0;
+
+    border-radius:
+        10px
+        10px
+        20px
+        20px;
+}
+
+.cake-top {
+
+    position: absolute;
+
+    width: 210px;
+    height: 45px;
+
+    left: 15px;
+    top: 72px;
+
+    background: #f4d8df;
+
+    border-radius: 50%;
+
+    border: 5px solid #e5b6c7;
+
+    z-index: 2;
+}
+
+.cream {
+
+    position: absolute;
+
+    width: 190px;
+    height: 25px;
+
+    left: 25px;
+    top: 96px;
+
+    background: white;
+
+    border-radius: 0 0 15px 15px;
+
+    z-index: 3;
+}
+
+
+/* Candles */
+
+.candle {
+
+    position: absolute;
+
+    width: 11px;
+    height: 50px;
+
+    bottom: 105px;
+
+    background: #c9b1e7;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    z-index: 6;
+}
+
+.candle:nth-child(1) {
+    left: 70px;
+}
+
+.candle:nth-child(2) {
+    left: 115px;
+}
+
+.candle:nth-child(3) {
+    left: 160px;
+}
+
+
+/* Flames */
+
+.flame {
+
+    position: absolute;
+
+    width: 15px;
+    height: 22px;
+
+    top: -20px;
+    left: -2px;
+
+    background: #ffd98a;
+
+    border-radius:
+        50%
+        50%
+        50%
+        0;
+
+    transform: rotate(-45deg);
+
+    box-shadow:
+        0 0 20px #ffd98a;
+
+    animation:
+        flicker .5s infinite alternate;
+}
+
+.flame.off {
+    display: none;
+}
+
+@keyframes flicker {
+
+    from {
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    to {
+        transform:
+            rotate(-42deg)
+            scale(.85);
+    }
+}
+
+.cake-note {
+    opacity: .65;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7e8ef,
+            #eee5f7
+        );
+}
+
+.final h2 {
+
+    font-size:
+        clamp(
+            45px,
+            8vw,
+            80px
+        );
+
+    margin-bottom: 25px;
+}
+
+.final p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+    opacity: .75;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 12px;
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+.confetti-piece {
+
+    position: fixed;
+
+    width: 9px;
+    height: 14px;
+
+    top: -20px;
+
+    animation:
+        fall 3.5s linear forwards;
+}
+
+@keyframes fall {
+
+    to {
+
+        transform:
+            translate3d(
+                var(--x),
+                110vh,
+                0
+            )
+            rotate(720deg);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .friend-animation {
+        transform: scale(.82);
+        margin-top: 5px;
+    }
+
+    .wishes {
+        grid-template-columns: 1fr;
+    }
+
+    .message-wrap {
+        padding: 30px 24px;
+    }
+
+    section {
+        padding: 70px 18px;
+    }
+
+    .decor {
+        font-size: 20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+
+    <!-- Floating decorations -->
+
+    <div class="decor one">♡</div>
+
+    <div class="decor two">✦</div>
+
+    <div class="decor three">♡</div>
+
+    <div class="decor four">✦</div>
+
+
+    <div class="hero-content">
+
+
+        <div class="eyebrow">
+            A little birthday surprise
+        </div>
+
+
+        <!-- Animated friends -->
+
+        <div class="friend-animation">
+
+
+            <!-- FRIEND ONE -->
+
+            <div class="friend-one">
+
+                <div class="head">
+
+                    <div class="eye-left"></div>
+
+                    <div class="eye-right"></div>
+
+                    <div class="smile"></div>
+
+                </div>
+
+                <div class="hair"></div>
+
+                <div class="body"></div>
+
+                <div class="arm"></div>
+
+                <div class="leg-one"></div>
+
+                <div class="leg-two"></div>
+
+            </div>
+
+
+            <!-- FRIEND TWO -->
+
+            <div class="friend-two">
+
+                <div class="head">
+
+                    <div class="eye-left"></div>
+
+                    <div class="eye-right"></div>
+
+                    <div class="smile"></div>
+
+                </div>
+
+                <div class="hair"></div>
+
+                <div class="body"></div>
+
+                <div class="arm"></div>
+
+                <div class="leg-one"></div>
+
+                <div class="leg-two"></div>
+
+            </div>
+
+
+        </div>
+
+
+        <h1>
+
+            Happy Birthday,
+
+            <span class="accent">
+                Mariam.
+            </span>
+
+        </h1>
+
+
+        <p class="intro">
+
+            For a beautiful soul, a growing Tech girl,
+            and one of those friends who makes the good
+            moments even better.
+
+        </p>
+
+
+        <a
+            href="#message"
+            class="btn"
+            onclick="launchConfetti()"
+        >
+            Open Your Surprise
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     FRIENDSHIP
+===================================================== -->
+
+<section class="friendship">
+
+    <div class="section-inner">
+
+
+        <div class="section-title">
+
+            <h2>
+                More Than Just Another Birthday
+            </h2>
+
+            <p>
+                Some friendships deserve their own celebration.
+            </p>
+
+        </div>
+
+
+        <div class="friendship-card">
+
+
+            <p>
+
+                Here's to the random conversations,
+                the laughter, the little moments,
+                the gist, the memories and all the
+                moments still waiting to happen.
+
+                <br>
+                <br>
+
+                Here's to watching you grow into the
+                amazing woman you're becoming.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MESSAGE
+===================================================== -->
+
+<section id="message">
+
+    <div class="section-inner">
+
+
+        <div class="section-title">
+
+            <h2>
+                A Message For You
+            </h2>
+
+            <p>
+                From your friend, with love.
+            </p>
+
+        </div>
+
+
+        <div class="message-wrap">
+
+
+            <p>
+                Dear Mariam,
+            </p>
+
+
+            <p>
+
+                Happy birthday to you!
+
+                Today is a perfect excuse to celebrate
+                not just another year of your life,
+                but the amazing person you are becoming.
+
+            </p>
+
+
+            <p>
+
+                Honestly, I'm really proud of how far
+                you've come, especially with your journey
+                as a Tech girl.
+
+                Watching you learn, grow, push yourself
+                and keep becoming better has been beautiful
+                to see.
+
+            </p>
+
+
+            <p>
+
+                You may not always realize how much
+                progress you've made, but it is there,
+                and it deserves to be celebrated.
+
+            </p>
+
+
+            <p>
+
+                I pray this new chapter brings you bigger
+                opportunities, meaningful connections,
+                financial ease, genuine happiness and
+                the confidence to go after the things
+                you truly want.
+
+            </p>
+
+
+            <p>
+
+                May all the effort you're putting into
+                yourself start opening doors you never
+                imagined.
+
+            </p>
+
+
+            <p>
+
+                And please, while becoming the serious
+                Tech babe you're destined to be, don't
+                forget to have fun, laugh loudly, enjoy
+                life and create plenty more memories.
+
+            </p>
+
+
+            <p>
+
+                You deserve a life that is successful
+                and still full of beautiful moments.
+
+            </p>
+
+
+            <p>
+
+                Keep growing.
+
+                Keep shining.
+
+                Keep being you.
+
+            </p>
+
+
+            <p>
+
+                I'm genuinely excited to see where this
+                next chapter takes you.
+
+            </p>
+
+
+            <div class="signature">
+
+                Happy birthday, Mariam. ❤️
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WISHES
+===================================================== -->
+
+<section>
+
+    <div class="section-inner">
+
+
+        <div class="section-title">
+
+            <h2>
+                Things I Wish For You
+            </h2>
+
+            <p>
+                For this new chapter and everything ahead.
+            </p>
+
+        </div>
+
+
+        <div class="wishes">
+
+
+            <div class="wish">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    More Growth
+                </h3>
+
+                <p>
+
+                    May your skills keep expanding and
+                    your confidence catch up with everything
+                    you are capable of.
+
+                </p>
+
+            </div>
+
+
+            <div class="wish">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h3>
+                    Bigger Opportunities
+                </h3>
+
+                <p>
+
+                    May the right rooms, people, projects
+                    and opportunities find you at exactly
+                    the right time.
+
+                </p>
+
+            </div>
+
+
+            <div class="wish">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h3>
+                    A Happy Life
+                </h3>
+
+                <p>
+
+                    May success never come at the expense
+                    of your peace, joy, laughter and
+                    beautiful memories.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAKE
+===================================================== -->
+
+<section class="cake-section">
+
+
+    <div class="section-inner">
+
+
+        <div class="section-title">
+
+            <h2>
+                Make a Wish, Birthday Girl.
+            </h2>
+
+            <p>
+                Tap each candle to blow it out.
+            </p>
+
+        </div>
+
+
+        <div class="cake">
+
+
+            <!-- Candle 1 -->
+
+            <div
+                class="candle"
+                onclick="blow(this)"
+            >
+
+                <span class="flame"></span>
+
+            </div>
+
+
+            <!-- Candle 2 -->
+
+            <div
+                class="candle"
+                onclick="blow(this)"
+            >
+
+                <span class="flame"></span>
+
+            </div>
+
+
+            <!-- Candle 3 -->
+
+            <div
+                class="candle"
+                onclick="blow(this)"
+            >
+
+                <span class="flame"></span>
+
+            </div>
+
+
+            <!-- Cake -->
+
+            <div class="cake-top"></div>
+
+            <div class="cream"></div>
+
+            <div class="cake-body"></div>
+
+            <div class="plate"></div>
+
+
+        </div>
+
+
+        <p
+            class="cake-note"
+            id="cakeNote"
+        >
+
+            Three little flames.
+            One big wish.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+
+    <div class="section-inner">
+
+
+        <div class="eyebrow">
+            And finally...
+        </div>
+
+
+        <h2>
+            Here's To Your Next Chapter.
+        </h2>
+
+
+        <p>
+
+            May this be the year you look back and
+            realize just how much you have grown.
+
+            More wins, more laughter, more adventures,
+            more confidence, more reasons to be proud
+            of yourself — and, of course, more Tech girl
+            greatness.
+
+            <br>
+            <br>
+
+            <strong>
+                Happy Birthday,
+                Mariam Abike Adewunmi Ojikutu.
+            </strong>
+
+            <br>
+            <br>
+
+            Your best days are still ahead.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    Made with love for Mariam • Birthday 2026
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function launchConfetti() {
+
+    const container =
+        document.getElementById("confetti");
+
+    container.innerHTML = "";
+
+
+    const colors = [
+        "#dca9bc",
+        "#c9b1e7",
+        "#f0cda2",
+        "#b7cbd8",
+        "#e7bfd0"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 100;
+        i++
+    ) {
+
+        const piece =
+            document.createElement("div");
+
+
+        piece.className =
+            "confetti-piece";
+
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+
+        piece.style.setProperty(
+            "--x",
+            (Math.random() * 240 - 120) + "px"
+        );
+
+
+        piece.style.animationDelay =
+            Math.random() * 1 + "s";
+
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
+
+
+        container.appendChild(piece);
+
+    }
+
+
+    setTimeout(
+        () => {
+            container.innerHTML = "";
+        },
+        5000
+    );
+
+}
+
+
+/* =====================================================
+   BLOW CANDLES
+===================================================== */
+
+function blow(candle) {
+
+    const flame =
+        candle.querySelector(".flame");
+
+
+    flame.classList.add("off");
+
+
+    const remaining =
+        document.querySelectorAll(
+            ".flame:not(.off)"
+        ).length;
+
+
+    const note =
+        document.getElementById(
+            "cakeNote"
+        );
+
+
+    if (remaining === 0) {
+
+        note.innerHTML =
+            "Wish made. May every good thing find its way to you. ✨";
+
+
+        launchConfetti();
+
+
+    } else {
+
+        note.innerHTML =
+            `${remaining} candle${
+                remaining === 1
+                    ? ""
+                    : "s"
+            } left... keep going.`;
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
